@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+    <LinearLayout
+        android:id="@+id/layout_ssid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/tv_ssid"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="ssid:"
+            android:layout_marginLeft="5dp"
+            />
+        <EditText
+            android:id="@+id/et_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input ssid"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_ssid"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="password:"
+            android:layout_marginLeft="5dp"
+            />
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="input password"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_security_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_passwd"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="security:"
+            android:layout_marginLeft="5dp"
+            />
+        <Button
+            android:id="@+id/btn_security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="select security"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="config"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_security_type"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
